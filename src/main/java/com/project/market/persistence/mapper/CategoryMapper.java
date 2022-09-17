@@ -1,7 +1,7 @@
 package com.project.market.persistence.mapper;
 
 import com.project.market.domain.Category;
-import com.project.market.persistence.Categoria;
+import com.project.market.persistence.entity.Categoria;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

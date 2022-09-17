@@ -3,6 +3,7 @@ package com.project.market.persistence;
 import com.project.market.domain.Product;
 import com.project.market.domain.repository.ProductRepository;
 import com.project.market.persistence.crud.ProductoCrudRepository;
+import com.project.market.persistence.entity.Producto;
 import com.project.market.persistence.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,7 +31,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Optional<List<Product>> getScarseProducts (int quantity) {
-        Optional<List<Producto>> productos = productoCrudRepository.findByIdCantidadStockLessThanAndEstado(quantity,true);
+        Optional<List<Producto>> productos = productoCrudRepository.findByCantidadStockLessThanAndEstado(quantity,true);
         return productos.map(prods -> mapper.toProducts(prods));
     }
 

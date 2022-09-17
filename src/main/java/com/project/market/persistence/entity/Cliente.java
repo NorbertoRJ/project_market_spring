@@ -1,4 +1,4 @@
-package com.project.market.persistence;
+package com.project.market.persistence.entity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -64,5 +64,13 @@ public class Cliente {
 
     public void setCorreElectronico(String correElectronico) {
         this.correElectronico = correElectronico;
+    }
+
+    public List<Compra> getCompras() {
+        return compras;
+    }
+
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
     }
 }
