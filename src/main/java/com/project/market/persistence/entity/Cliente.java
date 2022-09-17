@@ -12,7 +12,7 @@ public class Cliente {
     private String nombre;
     private String apellidos;
     private Long celular;
-    private String direcccion;
+    private String direccion;
     @Column(name = "correo_electronico")
     private String correElectronico;
 
@@ -50,12 +50,12 @@ public class Cliente {
         this.celular = celular;
     }
 
-    public String getDirecccion() {
-        return direcccion;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setDirecccion(String direcccion) {
-        this.direcccion = direcccion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getCorreElectronico() {
